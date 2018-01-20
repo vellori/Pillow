@@ -1,0 +1,6 @@
+framework module Pods_PillowTests {
+  umbrella header "Pods-PillowTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
