@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol Identifier {
+    func key() -> String
+    func type() -> String
+}
+
+protocol Identifiable {
+    var identifier: Identifier { get }
+}

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1EF1BBB312EB50D211091B9C /* Pods_Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68BB76BF2621EF01C8EB5ED3 /* Pods_Pillow.framework */; };
 		650E243B20132B3100C4AEF5 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E243A20132B3100C4AEF5 /* Module.swift */; };
+		650E244620132E2D00C4AEF5 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E244520132E2D00C4AEF5 /* Database.swift */; };
+		650E244820132EE100C4AEF5 /* Codable+Couchbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E244720132EE100C4AEF5 /* Codable+Couchbase.swift */; };
+		650E244A2013317000C4AEF5 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E24492013317000C4AEF5 /* Identifiable.swift */; };
+		650E244C201347E700C4AEF5 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E244B201347E700C4AEF5 /* Observation.swift */; };
 		659F735B2013247400032325 /* Pillow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659F73512013247400032325 /* Pillow.framework */; };
 		659F73602013247400032325 /* PillowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659F735F2013247400032325 /* PillowTests.swift */; };
 		659F73622013247400032325 /* Pillow.h in Headers */ = {isa = PBXBuildFile; fileRef = 659F73542013247400032325 /* Pillow.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +33,10 @@
 		4AA8653B996E84A12E18AE2E /* Pods-PillowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillowTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PillowTests/Pods-PillowTests.release.xcconfig"; sourceTree = "<group>"; };
 		500BE301BAB421C57AF3CFF2 /* Pods-PillowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PillowTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PillowTests/Pods-PillowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		650E243A20132B3100C4AEF5 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		650E244520132E2D00C4AEF5 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		650E244720132EE100C4AEF5 /* Codable+Couchbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Couchbase.swift"; sourceTree = "<group>"; };
+		650E24492013317000C4AEF5 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		650E244B201347E700C4AEF5 /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
 		659F73512013247400032325 /* Pillow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pillow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F73542013247400032325 /* Pillow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pillow.h; sourceTree = "<group>"; };
 		659F73552013247400032325 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +79,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		650E243F20132DDA00C4AEF5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				650E244520132E2D00C4AEF5 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		650E244020132DE400C4AEF5 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		650E244120132DED00C4AEF5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		650E244220132DF400C4AEF5 /* Observation */ = {
+			isa = PBXGroup;
+			children = (
+				650E244B201347E700C4AEF5 /* Observation.swift */,
+			);
+			path = Observation;
+			sourceTree = "<group>";
+		};
+		650E244320132DFE00C4AEF5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				650E24492013317000C4AEF5 /* Identifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		650E244420132E0600C4AEF5 /* SwiftGlue */ = {
+			isa = PBXGroup;
+			children = (
+				650E244720132EE100C4AEF5 /* Codable+Couchbase.swift */,
+			);
+			path = SwiftGlue;
+			sourceTree = "<group>";
+		};
 		659F73472013247400032325 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +148,12 @@
 		659F73532013247400032325 /* Pillow */ = {
 			isa = PBXGroup;
 			children = (
+				650E244420132E0600C4AEF5 /* SwiftGlue */,
+				650E244320132DFE00C4AEF5 /* Protocols */,
+				650E244220132DF400C4AEF5 /* Observation */,
+				650E244120132DED00C4AEF5 /* Search */,
+				650E244020132DE400C4AEF5 /* Document */,
+				650E243F20132DDA00C4AEF5 /* Database */,
 				659F73542013247400032325 /* Pillow.h */,
 				659F73552013247400032325 /* Info.plist */,
 				650E243A20132B3100C4AEF5 /* Module.swift */,
@@ -326,7 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650E244820132EE100C4AEF5 /* Codable+Couchbase.swift in Sources */,
+				650E244A2013317000C4AEF5 /* Identifiable.swift in Sources */,
+				650E244620132E2D00C4AEF5 /* Database.swift in Sources */,
 				650E243B20132B3100C4AEF5 /* Module.swift in Sources */,
+				650E244C201347E700C4AEF5 /* Observation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
